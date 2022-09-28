@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: #f6ad8b;
+}
+#center{
+    width: 350px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#center>video{
+    width: 100%;
+    height: 100%;
+}
+h1{
+    font-size: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-weight: 500;
+
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+#nav>h3{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+}
+.icons button{
+    padding: 10px 20px;
+    background-color: #845a46;
+    border: none;
+    border-radius: 20px;
+}
+.icons button:hover{
+    cursor: pointer;
+    background-color: #744a37;
+}
+#warn{
+    width: 220px;
+    color: #fff;
+    position: absolute;
+    bottom: 5%;
+    padding: 10px;
+    border-radius: 20px;
+    left: 5%;
+    background-color: #845a46;
+}
+#slidedown{
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%,0);
+    text-align: center;
+}
+#slidedown>h4{
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#slidedown>h5{
+    font-size: 20px;
+    animation-name: anima;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes anima {
+    0%{
+        margin-bottom: 10px;
+    }
+    50%{
+        margin-bottom: 0px;
+    }
+    100%{
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:500px){
+     #center{
+        top: 45%;
+        width: 260px;
+     }
+     h1{
+        top: 45%;
+        font-size: 90px;
+     }
+     #warn{
+        bottom: 12%;
+     }
+     #slidedown{
+        width: 300px;
+     }
+}
